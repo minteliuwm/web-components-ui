@@ -13,14 +13,35 @@ import '@stencil/core';
 export namespace Components {
 
   interface WcButton {
+    /**
+    * 是否禁用
+    */
     'disabled': boolean;
+    /**
+    * Icon
+    */
     'icon': string;
+    /**
+    * 风格
+    */
     'theme': string;
   }
   interface WcButtonAttributes extends StencilHTMLAttributes {
+    /**
+    * 是否禁用
+    */
     'disabled'?: boolean;
+    /**
+    * Icon
+    */
     'icon'?: string;
+    /**
+    * 点击事件
+    */
     'onOnClick'?: (event: CustomEvent) => void;
+    /**
+    * 风格
+    */
     'theme'?: string;
   }
 }

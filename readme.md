@@ -27,8 +27,29 @@ To run the unit tests for the components, run:
 npm test
 ```
 
+## Using this components
 
-## Using this component
+### In a Vue app
+- This can all be done within the **main.js** file.
+- Run `npm install web-components-ui --save`
+- Import the node module `import { defineCustomElements } from 'web-components-ui/dist/loader';`
+- Tell Vue to ignore the custom element tags `Vue.config.ignoredElements = [/wc-\w*/];`
+- Bind the Stenciljs component code to the window object `defineCustomElements(window);`
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### In a React app
+- This can all be done within the **index.js** file.
+- Run `npm install web-components-ui --save`
+- Import the node module `import { defineCustomElements } from 'web-components-ui/dist/loader';`
+- Bind the Stenciljs component code to the window object `defineCustomElements(window);`
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### In a Angular app
+- Run `npm install web-components-ui --save`
+- Import the node module `import { defineCustomElements } from 'web-components-ui/dist/loader';`
+- Call **defineCustomElements(window)** from **main.ts** (or some other appropriate place)
+- Include the **CUSTOM_ELEMENTS_SCHEMA** in the modules that use the components
+- Once included, components could be referenced in your code using **ViewChild** and **ViewChildren**
 
 ### Script tag
 
