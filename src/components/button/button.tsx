@@ -29,7 +29,7 @@ export class Button {
 	public render() {
 		return (
 			<button class={'u-btn btn-' + this.theme} disabled={this.disabled} onClick={this.handleClick.bind(this)}>
-				{this.icon ? <i class={'btn-icon icon-' + this.icon} /> : ''}
+				{this.icon ? <i class={'btn-icon wc-icon-' + this.icon} /> : ''}
 				<slot></slot>
 			</button>
 		);

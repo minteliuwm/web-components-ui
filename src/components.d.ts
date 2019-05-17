@@ -44,15 +44,30 @@ export namespace Components {
     */
     'theme'?: string;
   }
+
+  interface WcIcon {
+    /**
+    * Icon 名称
+    */
+    'name': string;
+  }
+  interface WcIconAttributes extends StencilHTMLAttributes {
+    /**
+    * Icon 名称
+    */
+    'name'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'WcButton': Components.WcButton;
+    'WcIcon': Components.WcIcon;
   }
 
   interface StencilIntrinsicElements {
     'wc-button': Components.WcButtonAttributes;
+    'wc-icon': Components.WcIconAttributes;
   }
 
 
@@ -62,12 +77,20 @@ declare global {
     new (): HTMLWcButtonElement;
   };
 
+  interface HTMLWcIconElement extends Components.WcIcon, HTMLStencilElement {}
+  var HTMLWcIconElement: {
+    prototype: HTMLWcIconElement;
+    new (): HTMLWcIconElement;
+  };
+
   interface HTMLElementTagNameMap {
     'wc-button': HTMLWcButtonElement
+    'wc-icon': HTMLWcIconElement
   }
 
   interface ElementTagNameMap {
     'wc-button': HTMLWcButtonElement;
+    'wc-icon': HTMLWcIconElement;
   }
 
 

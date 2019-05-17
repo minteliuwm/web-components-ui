@@ -9,16 +9,16 @@
 
 | Property   | Attribute  | Description | Type      | Default     |
 | ---------- | ---------- | ----------- | --------- | ----------- |
-| `disabled` | `disabled` |             | `boolean` | `false`     |
-| `icon`     | `icon`     |             | `string`  | `''`        |
-| `theme`    | `theme`    |             | `string`  | `'default'` |
+| `disabled` | `disabled` | 是否禁用        | `boolean` | `false`     |
+| `icon`     | `icon`     | Icon        | `string`  | `''`        |
+| `theme`    | `theme`    | 风格          | `string`  | `'default'` |
 
 
 ## Events
 
 | Event     | Description | Type                |
 | --------- | ----------- | ------------------- |
-| `onClick` |             | `CustomEvent<void>` |
+| `onClick` | 点击事件        | `CustomEvent<void>` |
 
 
 ----------------------------------------------
